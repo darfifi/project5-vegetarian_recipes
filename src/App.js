@@ -1,18 +1,27 @@
 
 import './App.css';
-import DetailPage from './pages/details-page/DetailPage';
-import FirstPage from './pages/first-page/FirstPage';
-import ResultPage from './pages/result-page/ResultPage';
+import HomePage from './pages/home-page/HomePage';
+import ResultFail from './pages/result-fail/ResultFail';
+import ResultList from './pages/result-list/ResultList';
+import ResultDetail from './pages/result-detail/ResultDetail';
+
+
+
+import { Route, Routes } from 'react-router-dom';
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>My vegetarian recipes app</h1>
-      <FirstPage />
-      <ResultPage />
-      <DetailPage />
-      <ComboPage />
-    </div>
+    
+  <>
+      <Routes>
+
+        <Route path="/" element={<HomePage />} />
+        <Route path="/searchresult/message" element={<ResultFail />} />
+        <Route path="/searchresult/recipes" element={<ResultList />} />
+        <Route path="/searchresult/recipes/detail" element={<ResultDetail />} />
+
+      </Routes>
+      </>
   );
 }
 

@@ -1,0 +1,30 @@
+
+.bimbo {
+    
+    
+    height: 800px;
+    
+    /*background-image: url('../assets/images/main-search-01.jpg');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /*box-shadow: 30px 30px 18px rgba(255, 255, 255, 0.6);*/
+    /*background-color: rgb(221, 90, 47, 0.6);*/
+    margin-top: 50px;
+    margin-right: 70px;
+    margin-left: 400px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    border: 1px solid red;
+    
+}
+
+.info-detail-container {
+    margin-right: 70px;
+    margin-left: 400px;
+
+    background-color: red;
+}

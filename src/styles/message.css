@@ -1,0 +1,11 @@
+.message {
+    font-size: 30px;
+    color: red;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 35px;
+    width: 700px;
+    padding: 25px;
+    border: 1px solid orange;
+    background-color: rgb(255, 208, 121, 0.7);
+}

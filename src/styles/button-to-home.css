@@ -1,0 +1,14 @@
+.button-to-home {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    padding: 15px 20px;
+    border: 1px solid red;
+    background-color: rgb(242, 176, 54);
+}
+
+.button-to-home:hover {
+    color: rgb(242, 176, 54);
+    background-color: white;
+    cursor: pointer;
+}

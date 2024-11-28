@@ -1,0 +1,13 @@
+.info-link {
+    color: rgb(254, 36, 36, 0.7);
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.info-link:hover {
+    color: rgb(254, 36, 36);
+}

@@ -1,0 +1,17 @@
+.title-home {
+    font-size: 88px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgb(241, 170, 60);
+    /*width: fit-content;*/
+    width: 900px;
+    display: inline-block;
+    padding: 10px 160px 10px 160px;
+    margin-top: 0;
+    text-shadow: 3px 3px 13px rgb(241, 170, 60);
+    text-align: center;
+}
+
+.title-details {
+    font-size: 48px;
+}

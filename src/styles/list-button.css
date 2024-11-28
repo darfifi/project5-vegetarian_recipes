@@ -1,0 +1,15 @@
+.navigation-button {
+    width: 100px;
+    height: 40px; 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(33, 122, 33, 0.6);
+    border-radius: 8px;
+}
+
+.navigation-button:hover {
+    background-color: rgb(33, 122, 33);
+}
