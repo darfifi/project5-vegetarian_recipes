@@ -4,18 +4,24 @@ import Title from "../../common-components/Title"
 import '../../styles/result-detail.css'
 import RecipeIngredients from "./components/RecipeIngredients"
 import RecipeDescription from "./components/RecipeDescription"
-import ButtonToHome from "../../common-components/ButtonToHome"
+import MultipurposeButton from "../../common-components/MultipurposeButton"
 import Layout from "../../common-components/Layout"
+import { useNavigation } from "../../customized-hooks/useNavigation"
 
 
 
 export default function ResultDetail() {
 
+    const {backToResultsList} = useNavigation(); 
+
     return (
 
         <Layout>
             <Title title={recipeDetails.title} />
-            <ButtonToHome />
+            <MultipurposeButton 
+                title={'Back to recipes list'}
+                buttonFunction={backToResultsList}
+            />
             <div className="general-box">
                 <div className="left-box">
                     <img className='detail-image' src={recipeDetails.image}/>
