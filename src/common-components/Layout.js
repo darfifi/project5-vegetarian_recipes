@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/result-detail-layout.css'
+import '../styles/layout.css'
 import { useState, useEffect } from "react"
 
 export default function Layout({children}) {
@@ -16,14 +16,14 @@ export default function Layout({children}) {
         });
         window.addEventListener("resize", handleResize);
 
-        // Cleanup del listener quando il componente viene smontato
+        // Cleanup of the listener when the component is dismounted
         return () => window.removeEventListener("resize", handleResize);
     }, [])
 
     return (
         <div style={{width: `${windowSize.width}px`, height: `${windowSize.height}px`}} className="general-container">
             <div className="blank-container"></div>
-            <div className="detail-page-container">
+            <div className="visualization-container">
                 <p>{windowSize.width}, {windowSize.height}</p>
                 {children}
             </div>

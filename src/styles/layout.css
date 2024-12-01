@@ -7,10 +7,9 @@
 
 .blank-container {
     width: 24%;
-    border: 3px solid green;
 }
 
-.detail-page-container {
+.visualization-container {
     display: flex;
     align-items: center;
     flex-direction: column; 
