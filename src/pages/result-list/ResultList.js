@@ -5,23 +5,18 @@ import ResultItem from '../result-list/components/ResultItem'
 import ButtonToHome from "../../common-components/ButtonToHome";
 import Subtitle from "./components/Subtitle";
 
+import Layout from "../../common-components/Layout";
+
 
 export default function ResultList() {
 
-    // Object definition for styling
-
-    const titleContainerStyle = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    }
-
     return (
-        <div className="bimbo">
+        <Layout>
             <Title title='Vegetarian Recipes'/>
             <ButtonToHome />
             <Subtitle />
-            <ResultItem />    
-        </div>
+            <ResultItem />
+        </Layout>
+        
     )
 }
