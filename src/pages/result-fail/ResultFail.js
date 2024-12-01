@@ -4,18 +4,15 @@ import Message from "./components/Message";
 import ButtonToHome from "../../common-components/ButtonToHome";
 import '../../styles/result-fail.css'
 
+import Layout from "../../common-components/Layout";
+
 
 export default function ResultFail() {
     return (
-        <>
-            <div className="message-container">
-                <Title title='Vegetarian Recipes' />
-                <Message />
-            </div>
-            <div className="home-button-container">
-                <ButtonToHome />
-            </div>
-        </>
-
+        <Layout>
+            <Title title='Vegetarian Recipes' />
+            <Message />
+            <ButtonToHome />
+        </Layout>
     )
 }

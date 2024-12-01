@@ -4,12 +4,12 @@ import '../../../styles/list-button.css'
 
 export default function ListButton({forward, backward}) {
     return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', border: '1px solid red'}}>
+        <div className="navigation-button-container">
             <div onClick={backward} className='navigation-button'>
                 <IoIosArrowBack style={{width: '20px', height: '20px'}}/>
             </div>
 
-            <div>Page 1 of 3</div>
+            <div className="pages-counter">Page 1 of 3</div>
 
             <div onClick={forward} className='navigation-button'>
                 <IoIosArrowForward style={{width: '20px', height: '20px'}}/>

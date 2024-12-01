@@ -9,9 +9,8 @@
     border: 3px solid rgb(241, 170, 60, 0.8);
     background-color: rgb(241, 170, 60, 0.25);
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgb(241, 170, 60, 0.8) ;
+    box-shadow: 5px 5px 10px rgb(241, 170, 60, 0.8);
 }
-
 
 .left-box {
     display: flex;
@@ -23,7 +22,6 @@
 }
 
 .right-box { 
-    /*border: 3px solid blue;*/
     width: 100%;
 }
 
@@ -34,22 +32,17 @@
 
 .iframe-container {
     position: absolute;
-
     top: 0px;
     right: 0;
-
     width: 500px;
     height: 800px;
     background-color: rgb(241, 170, 60, 0.7);
-    
-
     display: flex;
     align-items: center;
 }
 
 .nutrition-facts-clickable-container {
     position: absolute;
-
     top: 0;
     right: 500px;
     width: 50px;

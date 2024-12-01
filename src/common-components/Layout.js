@@ -2,7 +2,7 @@ import React from "react";
 import '../styles/result-detail-layout.css'
 import { useState, useEffect } from "react"
 
-export default function({children}) {
+export default function Layout({children}) {
 
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
