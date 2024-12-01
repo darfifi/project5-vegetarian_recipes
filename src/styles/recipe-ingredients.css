@@ -1,4 +1,26 @@
 .ingredients-list {
     color: white;
+    margin-top: 20px;
+    margin-left: 50px;
     line-height: 25px;
+}
+
+@media screen and (min-width: 1423px) and (max-width: 3000px) {
+   
+}
+
+
+@media screen and (min-width: 1222px) and (max-width: 1422px) {
+    
+}
+
+@media screen and (min-width: 1022px) and (max-width: 1221px) {
+   
+}
+
+@media screen and (min-width: 822px) and (max-width: 1021px) {
+    
+    .ingredients-list { 
+        font-size: 15px;
+    }
 }

@@ -1,0 +1,25 @@
+.general-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    border: 3px solid white;
+
+    
+}
+
+.blank-container {
+    width: 24%;
+    border: 3px solid green;
+}
+
+
+.detail-page-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    width: 76%;
+    height: 90%;
+    border: 1px solid red;
+}

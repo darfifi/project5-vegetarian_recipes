@@ -5,21 +5,19 @@ import SearchBar from "./components/SearchBar"
 import PopUp from "./components/PopUp"
 import About from "./components/About"
 import '../../styles/home-page.css'
+import Layout from "../../common-components/Layout"
 
 export default function HomePage() {
     return (
-        <>
-            <div className="bimbo">
-                <Title title='Vegetarian Recipe'/>
-                <div>
-                    <SearchBar>
+        <Layout>
+             <Title title='Vegetarian Recipe'/>
+             <SearchBar>
                         {/*<PopUp />*/}
                     </SearchBar>
-                </div> 
-            </div>
+            
             <div className="info-detail-container">
                 <About />
             </div>
-        </>
+        </Layout>
     )
 }

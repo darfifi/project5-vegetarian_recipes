@@ -1,61 +1,89 @@
-.general-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    border: 10px solid pink; 
-}
-
-.blank-container {
-    height: 800px;
-    width: 24%;
-    
-    
-
-    border: 3px solid green;
-}
-
-
-.detail-page-container {
-    height: 800px;
-    display: flex;
-    align-items: center;
-    flex-direction: column; 
-
-    
-    width: 76%;
-
-    border: 1px solid red;
-}
 
 .general-box {
     width: 90%;
     display: flex;
     justify-content: space-between;
     padding-top: 50px;  
-    
-    border: 1px solid red;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    border: 3px solid rgb(241, 170, 60, 0.8);
+    background-color: rgb(241, 170, 60, 0.25);
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgb(241, 170, 60, 0.8) ;
 }
 
 
 .left-box {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 500px;
-    border-right: 3px solid white;
-    padding-right: 50px;
+    border-right: 3px solid rgb(241, 170, 60, 0.8);
+    width: 80%;
 }
 
-.right-box {
-    
-    border: 3px solid blue;
-
+.right-box { 
+    /*border: 3px solid blue;*/
     width: 100%;
 }
 
 .detail-image {
     width: 300px;
     border-radius: 270px;
+}
+
+.iframe-container {
+    position: absolute;
+
+    top: 0px;
+    right: 0;
+
+    width: 500px;
+    height: 800px;
+    background-color: rgb(241, 170, 60, 0.7);
+    
+
+    display: flex;
+    align-items: center;
+}
+
+.nutrition-facts-clickable-container {
+    position: absolute;
+
+    top: 0;
+    right: 500px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(241, 170, 60, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1423px) and (max-width: 3000px) {
+   
+}
+
+
+@media screen and (min-width: 1222px) and (max-width: 1422px) {
+    
+}
+
+@media screen and (min-width: 1022px) and (max-width: 1221px) {
+   
+}
+
+@media screen and (min-width: 822px) and (max-width: 1021px) {
+   
+    .detail-image {
+        width: 200px;
+        border-radius: 170px;
+    }
+
 }

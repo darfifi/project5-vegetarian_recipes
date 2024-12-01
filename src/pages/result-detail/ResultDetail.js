@@ -4,43 +4,35 @@ import Title from "../../common-components/Title"
 import '../../styles/result-detail.css'
 import RecipeIngredients from "./components/RecipeIngredients"
 import RecipeDescription from "./components/RecipeDescription"
-import { useState, useEffect } from "react"
+import ButtonToHome from "../../common-components/ButtonToHome"
+import Layout from "../../common-components/Layout"
 
 
 
 export default function ResultDetail() {
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener("resize", handleResize);
-
-        // Cleanup del listener quando il componente viene smontato
-        return () => window.removeEventListener("resize", handleResize);
-    }, [])
-    
     return (
 
-        <div style={{width: `${windowWidth}px`}} className="general-container">
-            <div className="blank-container"></div>
-            <div className="detail-page-container">
-                <Title title={recipeDetails.title} />
-                <p>{windowWidth}</p>
-                <div style={{width: `calc(${windowWidth}px - 65%)`}}  className="general-box">
-
-                    <div className="left-box">
-                        <img className='detail-image' src={recipeDetails.image}/>
-                        <RecipeIngredients />
-                    </div>
-                    <div className="right-box">
-                        <RecipeDescription style={{backgroundColor: 'yellow'}}/>
-                    </div>
-
+        <Layout>
+            <Title title={recipeDetails.title} />
+            <ButtonToHome />
+            <div className="general-box">
+                <div className="left-box">
+                    <img className='detail-image' src={recipeDetails.image}/>
+                    <RecipeIngredients />
+                </div>
+                <div className="right-box">
+                    <RecipeDescription />
                 </div>
             </div>
-
-        </div>
+            {/*
+            <div className="iframe-container">
+                <iframe src='https://api.spoonacular.com/recipes/655575/nutritionLabel?apiKey=bb20efb7b3a3496ba813cf00c622777a' style={{
+                    width: "100%", height: "600px", border: "none"}} />
+                <div className="nutrition-facts-clickable-container"></div>
+            </div>
+            */}
+        </Layout>
     )
 }
 

@@ -1,0 +1,16 @@
+.recipe-description-title {
+    color: white;
+    margin-left: 30px; 
+    margin-right: 10px; 
+    text-align: center;
+}
+
+
+
+.recipe-description {
+    padding: 50px;
+    text-align: justify;
+    line-height: 25px;
+    color: white;
+    font-size: 16px;
+}
