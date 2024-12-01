@@ -12,16 +12,14 @@ import { Route, Routes } from 'react-router-dom';
 export default function App() {
   return (
     
-  <>
+    <>
       <Routes>
-
         <Route path="/" element={<HomePage />} />
         <Route path="/searchresult/message" element={<ResultFail />} />
         <Route path="/searchresult/recipes" element={<ResultList />} />
         <Route path="/searchresult/recipes/detail" element={<ResultDetail />} />
-
       </Routes>
-      </>
+    </>
   );
 }
 

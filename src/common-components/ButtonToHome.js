@@ -1,8 +1,8 @@
 import React from "react";
 import '../styles/button-to-home.css'
 
-export default function() {
+export default function({funzione}) {
     return (
-        <button className="button-to-home">Back to Home</button>
+        <button onClick={funzione} className="button-to-home">Back to Home</button>
     )
 }
