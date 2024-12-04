@@ -5,7 +5,7 @@ import { useAxios } from "../../../customized-hooks/useAxios"; // Import of cust
 import { setList } from "../home-page-slices/recipesList"; // Import of reducer from slice recipesList
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { API_KEY } from "../../../config";
+import { API_KEY } from "../../../../config";
 
 export default function SearchBar({children, startSearch}) {
 
@@ -24,7 +24,7 @@ export default function SearchBar({children, startSearch}) {
 
     function startSearch() {
         const stringForUrl = encodeURIComponent(searchString)
-        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${stringForUrl}&number=9`
+        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${stringForUrl}&number=100`
         getRecipesList(url)
             .then(data => dispatch(setList(data)))
             .then(navigate('/searchresult/recipes'));        
