@@ -1,41 +1,34 @@
 import React, { useState } from "react";
-import { CiSearch } from "react-icons/ci";
-import '../../../styles/search-bar.css'
-import { useAxios } from "../../../customized-hooks/useAxios";
-import axios from "axios";
-
-import { useDispatch, useSelector } from "react-redux";
-
+import '../../../styles/search-bar.css' // Styling file .css import
+import { CiSearch } from "react-icons/ci"; 
+import { useAxios } from "../../../customized-hooks/useAxios"; // Import of customized hook for fetching operations
+import { setList } from "../home-page-slices/recipesList"; // Import of reducer from slice recipesList
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
-import { setList } from "../home-page-slices/recipesList";
-
+import { API_KEY } from "../../../config";
 
 export default function SearchBar({children, startSearch}) {
 
-    const [searchString, setSearchString] = useState('')
-
+    const [searchString, setSearchString] = useState('') 
     const { getRecipesList } = useAxios()
-
-    let recipesList = useSelector(state => state.recipesList.value)
-
+    const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    const dispatch = useDispatch()
+    // Function to update search string during digitation 
 
     function updateSearchString(event) {
         setSearchString(event.target.value)
     }
 
+    // Function called for the onClick event that start the search of recipes
+
     function startSearch() {
         const stringForUrl = encodeURIComponent(searchString)
-        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=bb20efb7b3a3496ba813cf00c622777a&query=${stringForUrl}`
+        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${stringForUrl}&number=9`
         getRecipesList(url)
             .then(data => dispatch(setList(data)))
             .then(navigate('/searchresult/recipes'));        
 }
-
-
 
     return (
         <div className="search-bar-container">
