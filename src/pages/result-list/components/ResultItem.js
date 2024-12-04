@@ -4,15 +4,17 @@ import { useState } from "react"
 import ListButton from "./ListButton"
 import '../../../styles/result-item.css'
 
-
+import { useSelector } from "react-redux";
 
 
 export default function ResultItem() {
     
-    const recipesList = data.results   
+    const recipesList = useSelector(state => state.recipesList.value)
+
+    // const recipesList = data.results   
     const [itemNumber, setItemNumber] = useState(0);
 
-    const element = recipesList.slice(itemNumber, itemNumber +3).map(item => {
+    const recipe = recipesList.slice(itemNumber, itemNumber +3).map(item => {
 
         // return of the map of the array
         return (
@@ -41,7 +43,7 @@ export default function ResultItem() {
     return (
         <>
             <div className="elements-container">
-                <div style={{display: 'flex', flexDirection: 'column'}}>{element}</div>
+                <div style={{display: 'flex', flexDirection: 'column'}}>{recipe}</div>
             </div>
             <ListButton 
                     forward={handlePageForward}

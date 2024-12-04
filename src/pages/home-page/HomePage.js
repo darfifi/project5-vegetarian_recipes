@@ -8,12 +8,15 @@ import '../../styles/home-page.css'
 import Layout from "../../common-components/Layout"
 
 export default function HomePage() {
+
+    
+
     return (
         <Layout>
-             <Title title='Vegetarian Recipe'/>
-             <SearchBar>
-                        {/*<PopUp />*/}
-                    </SearchBar>
+            <Title title='Vegetarian Recipes'/>
+            <SearchBar >
+                {/*<PopUp />*/}
+            </SearchBar>
             
             <div className="info-detail-container">
                 <About />

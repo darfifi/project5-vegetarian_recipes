@@ -12,7 +12,7 @@ import Layout from "../../common-components/Layout";
 
 export default function ResultList() {
     
-    const {backToSearch} = useNavigation();
+    const { backToSearch } = useNavigation();
    
     return (
         <Layout>

@@ -12,7 +12,7 @@ import { useNavigation } from "../../customized-hooks/useNavigation"
 
 export default function ResultDetail() {
 
-    const {backToResultsList} = useNavigation(); 
+    const { backToResultsList } = useNavigation(); 
 
     return (
 
