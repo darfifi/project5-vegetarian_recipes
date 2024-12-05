@@ -5,7 +5,7 @@ import { useAxios } from "../../../customized-hooks/useAxios"; // Import of cust
 import { setList } from "../home-page-slices/recipesList"; // Import of reducer from slice recipesList
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { API_KEY } from "../../../../config";
+import { API_KEY } from "../../../config"
 
 export default function SearchBar({children, startSearch}) {
 
