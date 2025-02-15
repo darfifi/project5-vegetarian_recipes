@@ -18,5 +18,4 @@ export const recipesListSlice = createSlice({
 })
 
 export const { resetList, setList } = recipesListSlice.actions;
-
 export default recipesListSlice.reducer;

@@ -2,19 +2,30 @@
     display: flex;
     align-items: center;
     position: relative;
+    margin-top: 30px;
 }
 
 .input-box {
     padding-left: 15px;
-    margin-left: 50px;
-    height: 55px;
+    height: 45px;
     width: 500px;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-radius: 15px;
     border: none;
     font-size: 20px;
     background-color: rgb(255, 255, 255, 0.7);
 }
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
 
 .input-box:focus {
     outline: 2px solid rgb(112, 31, 16);
@@ -43,4 +54,61 @@
 .search-icon {
     width: 30px;
     height: 30px;
+}
+
+
+@media screen and (min-width: 1423px) and (max-width: 3000px) {
+    
+}
+
+@media screen and (min-width: 1222px) and (max-width: 1422px) {
+    
+}
+
+@media screen and (min-width: 1022px) and (max-width: 1221px) {
+    
+}
+
+@media screen and (min-width: 822px) and (max-width: 1021px) {
+    .input-box {
+        width: 400px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 821px) {
+    .input-box {
+        width: 400px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px) {
+    .input-box {
+        width: 350px;
+        font-size: 20px;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    .input-box {
+        width: 800px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    .input-box {
+        width: 300px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+    .input-box {
+        width: 280px;
+        font-size: 16px;
+    }
 }

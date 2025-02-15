@@ -25,3 +25,56 @@
     margin-left: 8px;
     margin-right: 8px;
 }
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+
+@media screen and (min-width: 700px) and (max-width: 1021px) {
+    .navigation-button {
+        width: 70px;
+        height: 30px; 
+    }
+
+    .pages-counter {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px) {
+    .navigation-button {
+        width: 60px;
+        height: 30px; 
+    }
+
+    .pages-counter {
+        font-size: 13px;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    .navigation-button {
+        width: 60px;
+        height: 30px; 
+    }
+
+    .pages-counter {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+    .navigation-button {
+        width: 60px;
+        height: 30px; 
+    }
+
+    .pages-counter {
+        font-size: 13px;
+    }
+}

@@ -12,3 +12,23 @@
     background-color: white;
     cursor: pointer;
 }
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    .button-to-home {
+        font-size: 14px;
+        padding: 10px 40px;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+    .button-to-home {
+        font-size: 13px;
+        padding: 10px 40px;
+    }
+}

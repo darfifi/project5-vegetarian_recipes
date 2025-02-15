@@ -1,18 +1,27 @@
 import axios from "axios";
+import { API_KEY } from "../config";
 
 export function useAxios() {
 
-    const getRecipesList = async (url) => {
+    const getRecipesList = async (searchString) => {
+        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${searchString}&number=15`
         const result = await axios.get(url);
-        return result.data.results;
+        return result.data.results;    
     }
 
-    const getRecipeDetails = (id) => {
-        const url = 'giggi';
-        return axios.get(url).then (result => alert(result)) 
+    const getRecipeDetails = async (id) => {
+        const url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`
+        const result = await axios.get(url)
+        return result.data; 
     }
 
-    return { getRecipesList, getRecipeDetails }
+    const getRecipeIngredients = async(id) => {
+        const url = `https://api.spoonacular.com/recipes/${id}/ingredientWidget.json?apiKey=${API_KEY}`
+        const result = await axios.get(url)
+        return result.data.ingredients;
+    }
+
+    return { getRecipesList, getRecipeDetails, getRecipeIngredients }
 
 }
 

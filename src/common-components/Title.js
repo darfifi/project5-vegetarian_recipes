@@ -1,9 +1,9 @@
 import React from "react"
 import '../styles/title.css'
 
-export default function Title({ title }) {
+export default function Title({ title, details }) {
     return (
-        <h1 className={`title-home title-details`}>{title}</h1>
+        <h1 className={`title-home ${details ? `title-details` : ``}`}>{title}</h1>
     )
 }
 

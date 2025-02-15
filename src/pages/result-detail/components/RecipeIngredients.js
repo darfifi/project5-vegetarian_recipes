@@ -1,20 +1,19 @@
 import React from "react";
-import ingredientsData from '../../../ingredients.json'
 import '../../../styles/recipe-ingredients.css'
+import { useSelector } from "react-redux";
 
-export default function() {
+export default function RecipeIngredients() {
 
-    const ingredientsArray = ingredientsData.ingredients;
-
-    const ingredientList = ingredientsArray.map(element => {
+    const ingredients = useSelector(state => state.ingredients.value)
+    const ingredientsList = ingredients.map(element => {
         return (
-            <li>{element.amount.metric.value} {element.amount.metric.unit} {element.name}</li>
+            <li>{element.amount.us.value} {element.amount.us.unit} {element.name}</li>
         )
     })
 
     return (
         <ul className="ingredients-list">
-            {ingredientList}
+            {ingredientsList}
         </ul>
     )
 }

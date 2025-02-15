@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import '../../../styles/search-bar.css' // Styling file .css import
 import { CiSearch } from "react-icons/ci"; 
 import { useAxios } from "../../../customized-hooks/useAxios"; // Import of customized hook for fetching operations
-import { setList } from "../home-page-slices/recipesList"; // Import of reducer from slice recipesList
+import { setList } from "../../../store/slices/recipesList"; // Import of reducer from slice recipesList
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { API_KEY } from "../../../config"
+import { MissingSearchString, MissingResult } from "../../../utils/errors";
+import { resetModalStatus, setError, setLoading } from "../../../store/slices/modalStatus";
 
-export default function SearchBar({children, startSearch}) {
+
+export default function SearchBar({children}) {
 
     const [searchString, setSearchString] = useState('') 
     const { getRecipesList } = useAxios()
@@ -23,17 +25,31 @@ export default function SearchBar({children, startSearch}) {
     // Function called for the onClick event that start the search of recipes
 
     function startSearch() {
-        const stringForUrl = encodeURIComponent(searchString)
-        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${stringForUrl}&number=100`
-        getRecipesList(url)
-            .then(data => dispatch(setList(data)))
-            .then(navigate('/searchresult/recipes'));        
-}
-
+        try {
+            if (!searchString.trim()) {
+                throw new MissingSearchString('Search string cannot be empty!')     
+            }
+            const stringForUrl = encodeURIComponent(searchString)
+            dispatch(setLoading())
+            getRecipesList(stringForUrl)
+                .then(data => {
+                    if (data.length === 0) {
+                        throw new MissingResult('You shoud try with another search string!')
+                    } 
+                    dispatch(setList(data))
+                    dispatch(resetModalStatus())
+                    navigate('/searchresult/recipes')       
+                })
+                //.then(navigate('/searchresult/recipes'))
+                .catch(error => dispatch(setError(error)))
+        } catch (error) {
+            dispatch(setError(error))
+        }  
+    }
     return (
         <div className="search-bar-container">
             <input onChange={updateSearchString} className="input-box" type="text" placeholder="Search recipe..." />
-            <div onClick={startSearch} className="search-button">{<CiSearch className="search-icon"/>}</div>
+            <CiSearch className="search-icon" onClick={startSearch}/>
             {children}
         </div>
     )

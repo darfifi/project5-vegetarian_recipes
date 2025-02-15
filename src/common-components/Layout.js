@@ -24,7 +24,6 @@ export default function Layout({children}) {
         <div style={{width: `${windowSize.width}px`, height: `${windowSize.height}px`}} className="general-container">
             <div className="blank-container"></div>
             <div className="visualization-container">
-                <p>{windowSize.width}, {windowSize.height}</p>
                 {children}
             </div>
         </div>

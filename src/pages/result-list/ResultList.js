@@ -1,14 +1,10 @@
-
 import React from "react";
 import Title from "../../common-components/Title";
 import ResultItem from '../result-list/components/ResultItem'
 import MultipurposeButton from "../../common-components/MultipurposeButton";
 import Subtitle from "./components/Subtitle";
-
 import { useNavigation } from "../../customized-hooks/useNavigation";
-
 import Layout from "../../common-components/Layout";
-
 
 export default function ResultList() {
     
@@ -16,7 +12,10 @@ export default function ResultList() {
    
     return (
         <Layout>
-            <Title title='Vegetarian Recipes'/>
+            <Title 
+                title='Vegetarian Recipes'
+                details={false}
+            />
             <MultipurposeButton 
                 title={'New search'}
                 buttonFunction={backToSearch}

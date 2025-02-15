@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { useAxios } from "../../../customized-hooks/useAxios";
 
 export const searchStringSlice = createSlice({
     name: 'searchString',
@@ -8,11 +7,13 @@ export const searchStringSlice = createSlice({
         value: '',
     },
 
-    updateString: (state, action) => {
-        state.value += action.payload;
-    },
+    reducers: {
+
+        updateString: (state, action) => {
+            state.value += action.payload;
+        },
+    }    
 })
 
 export const { updateString } = searchStringSlice.actions;
-
 export default searchStringSlice.reducer;

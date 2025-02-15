@@ -1,54 +1,70 @@
 import React from "react"
-import data from '../../../data.json'
-import { useState } from "react"
+
 import ListButton from "./ListButton"
 import '../../../styles/result-item.css'
-
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useAxios } from "../../../customized-hooks/useAxios"
+import { setRecipe } from "../../../store/slices/recipe"
+import { setIngredients } from "../../../store/slices/ingredients";
+import { useNavigate } from "react-router-dom"
+import { incrementPageNumber, decrementPageNumber } from "../../../store/slices/pageNumber"
 
 
 export default function ResultItem() {
     
     const recipesList = useSelector(state => state.recipesList.value)
-
-    // const recipesList = data.results   
-    const [itemNumber, setItemNumber] = useState(0);
-
-    const recipe = recipesList.slice(itemNumber, itemNumber +3).map(item => {
+    const totalPages = Math.ceil(recipesList.length / 3)
+    const { getRecipeDetails, getRecipeIngredients } = useAxios()
+    const dispatch = useDispatch();
+    const navigate = useNavigate();   
+    
+    const pageNumber = useSelector(state => state.pageNumber.value)
+    const recipe = recipesList.slice(pageNumber * 3, (pageNumber * 3) +3).map(item => {
 
         // return of the map of the array
         return (
-            
-            <div className='element-container'> 
-                <img src={item.image}/>
+            <div onClick={() => getDetails(item.id)} className='element-container'> 
+                <img src={item.image} alt="Missing recipe"/>
                 <p>{item.title}</p>
             </div>
         )
     })
 
+    function getDetails(id) {
+        getRecipeDetails(id)
+            .then(result => dispatch(setRecipe(result)))
+            .then(getRecipeIngredients(id)
+                    .then(result => dispatch(setIngredients(result)))
+                 )
+            .then(navigate('/searchresult/recipes/detail'))
+    }
+
+    // Functions to manage the list of recipes
+
     function handlePageForward() {
-        setItemNumber (prevItemNumber => {
-            return prevItemNumber + 3
-        })
+        if (!((pageNumber + 1) === totalPages)) {
+            dispatch(incrementPageNumber())    
+        }
     }
 
     function handlePageBackward() {
-        setItemNumber (prevItemNumber => {
-            return prevItemNumber - 3
-        })
+        if (pageNumber) {
+            dispatch(decrementPageNumber())    
+        }
     }
 
     // return of the component
 
     return (
         <>
-            <div className="elements-container">
-                <div style={{display: 'flex', flexDirection: 'column'}}>{recipe}</div>
+            <div className="recipes-container">
+                <div className="recipe">{recipe}</div>
             </div>
             <ListButton 
-                    forward={handlePageForward}
-                    backward={handlePageBackward}
-                />
+                forward={handlePageForward}
+                backward={handlePageBackward}
+                totalPages={totalPages}
+            />
         </>
     )
 }
