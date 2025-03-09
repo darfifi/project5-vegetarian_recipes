@@ -14,6 +14,7 @@
     width: 100%;
 }
 
+/* MEDIA QUERIES FOR DESKTOP AND LAPTOP DEVICES */
 
 @media screen and (min-width: 1423px) and (max-width: 3000px) {
     .title-home {
@@ -48,7 +49,7 @@
 
 @media screen and (min-width: 822px) and (max-width: 1021px) {
     .title-home {
-        font-size: 58px;
+        font-size: 53px;
     }
 
     .title-details {
@@ -58,7 +59,7 @@
 
 @media screen and (min-width: 700px) and (max-width: 821px) {
     .title-home {
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .title-details {
@@ -68,7 +69,7 @@
 
 @media screen and (min-width: 500px) and (max-width: 699px) {
     .title-home {
-        font-size: 40px;
+        font-size: 35px;
     }
 
     .title-details {
@@ -79,10 +80,16 @@
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
 @media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    
+    
+    
+    
     .title-details {
         padding: 10px 30px 20px 20px;
         font-size: 20px;
     }
+
+    
 }
 
 @media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {

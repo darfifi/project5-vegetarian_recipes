@@ -4,7 +4,7 @@ import { API_KEY } from "../config";
 export function useAxios() {
 
     const getRecipesList = async (searchString) => {
-        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&query=${searchString}&number=15`
+        const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&diet=vegetarian&query=${searchString}&number=15`
         const result = await axios.get(url);
         return result.data.results;    
     }

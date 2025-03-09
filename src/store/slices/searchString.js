@@ -8,7 +8,6 @@ export const searchStringSlice = createSlice({
     },
 
     reducers: {
-
         updateString: (state, action) => {
             state.value += action.payload;
         },

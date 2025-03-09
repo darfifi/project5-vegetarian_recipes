@@ -4,7 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { resetPageNumber } from "../store/slices/pageNumber";
 import { resetList } from "../store/slices/recipesList";
 import { useDispatch } from "react-redux";
-
+import { resetRecipe } from "../store/slices/recipe"
+import { resetIngredients } from "../store/slices/ingredients"
+import { resetModalStatus } from "../store/slices/modalStatus";
 
 export function useNavigation() {
 
@@ -18,6 +20,9 @@ export function useNavigation() {
     };
 
     const backToResultsList = () => {
+        dispatch(resetRecipe())
+        dispatch(resetIngredients())
+        dispatch(resetModalStatus())
         navigate('/searchresult/recipes')
     };
 

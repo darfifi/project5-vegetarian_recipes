@@ -3,7 +3,6 @@ import Title from "../../common-components/Title"
 import SearchBar from "./components/SearchBar"
 import PopUp from "./components/PopUp"
 import About from "./components/About"
-import '../../styles/home-page.css'
 import '../../styles/modal.css'
 import Layout from "../../common-components/Layout"
 import Modal from "../../common-components/Modal"
@@ -13,8 +12,8 @@ import { resetModalStatus } from "../../store/slices/modalStatus"
 
 export default function HomePage() {
 
-    let modalStatus = useSelector(state => state.modalStatus.value);
-    let dispatch = useDispatch();
+    const modalStatus = useSelector(state => state.modalStatus.value);
+    const dispatch = useDispatch();
 
     const refreshPage = function() {
         dispatch(resetModalStatus())
@@ -22,9 +21,9 @@ export default function HomePage() {
 
     return (
         <Layout>
-            {(modalStatus.error.status || modalStatus.loading) && <Modal>
-                {modalStatus.loading && <Message message={'Loading...'}/>}
-                <div className="error-message-container">
+            {(modalStatus.error.status || modalStatus.loading) && <Modal> 
+                <div className="error-message-container"> 
+                    {modalStatus.loading && <Message message={'Loading...'}/>}
                     {modalStatus.error.status && <Message message={`${modalStatus.error.name}`} subMessage={`${modalStatus.error.message}`}/>}
                     {modalStatus.error.status && <div className="error-back-button" onClick={refreshPage}>Close</div>}
                 </div>

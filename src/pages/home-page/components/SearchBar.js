@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import '../../../styles/search-bar.css' // Styling file .css import
+import '../../../styles/search-bar.css'
 import { CiSearch } from "react-icons/ci"; 
-import { useAxios } from "../../../customized-hooks/useAxios"; // Import of customized hook for fetching operations
-import { setList } from "../../../store/slices/recipesList"; // Import of reducer from slice recipesList
+import { useAxios } from "../../../customized-hooks/useAxios";
+import { setList } from "../../../store/slices/recipesList"; 
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { MissingSearchString, MissingResult } from "../../../utils/errors";
@@ -22,12 +22,15 @@ export default function SearchBar({children}) {
         setSearchString(event.target.value)
     }
 
-    // Function called for the onClick event that start the search of recipes
+    // Function called for the onClick event that starts the search of recipes
 
     function startSearch() {
         try {
             if (!searchString.trim()) {
                 throw new MissingSearchString('Search string cannot be empty!')     
+            }
+            if (searchString.trim().length < 2) {
+                throw new MissingSearchString('Search string should have at least two characters!')
             }
             const stringForUrl = encodeURIComponent(searchString)
             dispatch(setLoading())
@@ -40,7 +43,6 @@ export default function SearchBar({children}) {
                     dispatch(resetModalStatus())
                     navigate('/searchresult/recipes')       
                 })
-                //.then(navigate('/searchresult/recipes'))
                 .catch(error => dispatch(setError(error)))
         } catch (error) {
             dispatch(setError(error))
@@ -48,7 +50,16 @@ export default function SearchBar({children}) {
     }
     return (
         <div className="search-bar-container">
-            <input onChange={updateSearchString} className="input-box" type="text" placeholder="Search recipe..." />
+            <input 
+                onChange={updateSearchString} 
+                onMouseEnter={event => event.target.style.backgroundColor = 'rgb(183, 183, 183)'} 
+                onMouseOut={event => event.target.style.backgroundColor = 'white'}
+                onKeyDown={event => {if (event.key === 'Enter') {
+                    startSearch();                    
+                }}}
+                className="input-box" type="text" 
+                placeholder="Search recipe..." 
+            />
             <CiSearch className="search-icon" onClick={startSearch}/>
             {children}
         </div>

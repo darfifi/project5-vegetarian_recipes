@@ -5,18 +5,13 @@
     position: relative;
 }
 
-.blank-container {
-    
-    
-    border: 1px solid red;
-}
-
 .visualization-container {
     display: flex;
     align-items: center;
     flex-direction: column; 
     width: 76%;
     height: 90%;
+    margin-right: 20px;
 }
 
 @media screen and (min-width: 1423px) and (max-width: 3000px) {
@@ -58,13 +53,31 @@
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
 @media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
-    
+    .blank-container {
+        width: 15%;
+    }
+
+    .visualization-container {
+        margin-right: 20px;
+    }
 }
 
 @media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
-    
+    .blank-container {
+        width: 15%;
+    }
+
+    .visualization-container {
+        margin-right: 0;
+    }
 }
 
 @media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
-    
+    .blank-container {
+        width: 15%;
+    }
+
+    .visualization-container {
+        margin-right: 20px;
+    }
 }

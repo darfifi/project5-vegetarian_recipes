@@ -42,11 +42,11 @@
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 821px) {
+@media screen and (min-width: 500px) and (max-width: 821px) {
     .ingredients-list {
-        font-size: 10px;
-        padding-left: 50px;
-        padding-right: 55px;
+        font-size: 12px;
+        padding-left: 20px;
+        padding-right: 20pxpx;
     }    
 }
 

@@ -94,7 +94,7 @@
 
 @media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
     .input-box {
-        width: 800px;
+        width: 450px;
         font-size: 20px;
     }
 }

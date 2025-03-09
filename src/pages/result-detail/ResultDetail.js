@@ -32,13 +32,17 @@ export default function ResultDetail() {
                     <RecipeDescription />
                 </div>
             </div>
-            {/*
-            <div className="iframe-container">
-                <iframe src='https://api.spoonacular.com/recipes/655575/nutritionLabel?apiKey=bb20efb7b3a3496ba813cf00c622777a' style={{
-                    width: "100%", height: "600px", border: "none"}} />
+            
+
+
+            {/*<div className="iframe-container">
+                <iframe src='https://api.spoonacular.com/recipes/655575/nutritionLabel?apiKey=71078c8f7974405ba141926dda4e751e' style={{
+                    width: "100%", height: "600px", border: "none", margin: "20px"}} />
                 <div className="nutrition-facts-clickable-container"></div>
-            </div>
-            */}
+            </div>*/}
+            
+
+
         </Layout>
     )
 }

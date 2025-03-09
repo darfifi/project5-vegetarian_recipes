@@ -1,14 +1,13 @@
 import React from "react"
-
 import ListButton from "./ListButton"
 import '../../../styles/result-item.css'
 import { useSelector, useDispatch } from "react-redux";
 import { useAxios } from "../../../customized-hooks/useAxios"
 import { setRecipe } from "../../../store/slices/recipe"
 import { setIngredients } from "../../../store/slices/ingredients";
+import { setError, setLoading } from "../../../store/slices/modalStatus";
 import { useNavigate } from "react-router-dom"
 import { incrementPageNumber, decrementPageNumber } from "../../../store/slices/pageNumber"
-
 
 export default function ResultItem() {
     
@@ -30,16 +29,46 @@ export default function ResultItem() {
         )
     })
 
+
+
+
+
+
+
+
+
+
+    // VERIFICARE FUNZIONE
+
+
     function getDetails(id) {
+
+        dispatch(setLoading())
+
         getRecipeDetails(id)
             .then(result => dispatch(setRecipe(result)))
             .then(getRecipeIngredients(id)
                     .then(result => dispatch(setIngredients(result)))
+                    .catch(error => dispatch(setError(error)))
                  )
             .then(navigate('/searchresult/recipes/detail'))
+            .catch(error => dispatch(setError(error)))
     }
 
-    // Functions to manage the list of recipes
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Functions to manage the pages showing the list of recipes
 
     function handlePageForward() {
         if (!((pageNumber + 1) === totalPages)) {

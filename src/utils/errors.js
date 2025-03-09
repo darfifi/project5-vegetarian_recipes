@@ -2,7 +2,7 @@
 class MissingSearchString extends Error {
     constructor(message) {
         super(message)
-        this.name = 'Missing search string'
+        this.name = 'Search string error'
     }
 }
 

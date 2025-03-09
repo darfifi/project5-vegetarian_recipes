@@ -24,14 +24,16 @@
 
 .right-box { 
     width: 100%;
+    height: 100%;
 }
 
 .iframe-container {
     position: absolute;
-    top: 0px;
-    right: 0;
-    width: 500px;
-    height: 800px;
+    top: 30px;
+    right: 50px;
+    min-width: 40%;
+    height: 80%;
+    padding: 0 30px;
     background-color: rgb(241, 170, 60, 0.7);
     display: flex;
     align-items: center;
@@ -40,11 +42,13 @@
 .nutrition-facts-clickable-container {
     position: absolute;
     top: 0;
-    right: 500px;
+    right: 0;
     width: 50px;
     height: 50px;
     background-color: rgb(241, 170, 60, 0.7);
+    background-color: aqua;
 }
+
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
@@ -79,19 +83,7 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 821px) {
-    .detail-image {
-        width: 150px;
-        border-radius: 100px;
-    }  
-}
 
-/* MEDIA QUERIES FOR MOBILE DEVICES */
-
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
-    
-}
-
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
     .general-box {
         width: 95%;
         height: 100%;
@@ -105,26 +97,21 @@
         background-color: rgb(241, 170, 60, 0.25);
         border-radius: 8px;
         box-shadow: 5px 5px 10px rgb(241, 170, 60, 0.8);
-        overflow-y: hidden;
-        
+        overflow-y: hidden; 
     }
 
     .left-box {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        height: 60%;
+        
+        height: 50%;
         border-right: none;
         width: 100%;
-        padding: 0 20px 30px 20px;
+        padding: 0 20px 30px 40px;
     }
 
     .right-box { 
-        width: 100%;
-        overflow-y: hidden;
-
-        
+        overflow-y: hidden;  
     }
 
     .detail-image {
@@ -132,6 +119,41 @@
         border-radius: 100px;
         margin-right: 10px;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    
 }
 
 @media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
