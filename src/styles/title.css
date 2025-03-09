@@ -1,17 +1,12 @@
 .title-home {
     font-weight: 700;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    text-align: center;
     color: rgb(241, 170, 60);
+    text-shadow: 3px 3px 13px rgb(241, 170, 60);
     width: 100%;
     padding: 10px 30px 40px 30px;
     margin-top: 0;
-    text-shadow: 3px 3px 13px rgb(241, 170, 60);
-    text-align: center; 
-}
-
-.title-details {
-    padding: 10px 30px 30px 30px;
-    width: 100%;
 }
 
 /* MEDIA QUERIES FOR DESKTOP AND LAPTOP DEVICES */
@@ -80,16 +75,10 @@
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
 @media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
-    
-    
-    
-    
     .title-details {
         padding: 10px 30px 20px 20px;
-        font-size: 20px;
-    }
-
-    
+        font-size: 25px;
+    }    
 }
 
 @media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {

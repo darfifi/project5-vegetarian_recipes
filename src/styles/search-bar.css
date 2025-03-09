@@ -1,14 +1,14 @@
 .search-bar-container {
-    display: flex;
-    align-items: center;
     position: relative;
     margin-top: 30px;
+    width: 100%;
+    text-align: center;
 }
 
 .input-box {
     padding-left: 15px;
     height: 45px;
-    width: 500px;
+    
     border-radius: 15px;
     border: none;
     font-size: 20px;
@@ -17,18 +17,17 @@
 
 .search-icon {
     position: absolute;
-    right: 10px;
+    right: 17%;
     top: 50%;
+    width: 30px;
+    height: 30px;
     transform: translateY(-50%);
     color: gray;
-    font-size: 20px;
     cursor: pointer;
 }
 
-
-
 .input-box:focus {
-    outline: 2px solid rgb(112, 31, 16);
+    outline: 1px solid rgb(112, 31, 16);
     outline-offset: 2px;
 }
 
@@ -36,57 +35,72 @@
     color: rgb(45, 41, 41, 0.4);
 }
 
-.search-button {
-    width: 57px;
-    height: 57px;
-    background-color: rgb(48, 99, 26);
-    display: inline-block;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.search-button:hover {
-    cursor: pointer;
-    background-color: lightgreen;
-}
-
-.search-icon {
-    width: 30px;
-    height: 30px;
-}
-
+/* MEDIA QUERIES FOR DESKTOP AND LAPTOP DEVICES */
 
 @media screen and (min-width: 1423px) and (max-width: 3000px) {
-    
+    .input-box {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .search-icon {
+        right: 26%;
+    }
 }
 
+
 @media screen and (min-width: 1222px) and (max-width: 1422px) {
-    
+    .input-box {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .search-icon {
+        right: 26%;
+    }
 }
 
 @media screen and (min-width: 1022px) and (max-width: 1221px) {
-    
+    .input-box {
+        width: 60%;
+        font-size: 20px;
+    }
+
+    .search-icon {
+        right: 22%;
+    }
 }
 
 @media screen and (min-width: 822px) and (max-width: 1021px) {
     .input-box {
-        width: 400px;
+        width: 70%;
         font-size: 20px;
+    }
+
+    .search-icon {
+        right: 17%;
     }
 }
 
 @media screen and (min-width: 700px) and (max-width: 821px) {
     .input-box {
-        width: 400px;
+        width: 80%;
         font-size: 20px;
+    }
+
+    .search-icon {
+        right: 12%;
     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 699px) {
     .input-box {
-        width: 350px;
+        width: 90%;
         font-size: 20px;
+    }
+
+    .search-icon {
+        right: 8%;
     }
 }
 
@@ -94,21 +108,25 @@
 
 @media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
     .input-box {
-        width: 450px;
+        width: 70%;
         font-size: 20px;
     }
 }
 
 @media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
     .input-box {
-        width: 300px;
+        width: 70%;
         font-size: 18px;
     }
 }
 
 @media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
     .input-box {
-        width: 280px;
+        width: 85%;
         font-size: 16px;
+    }
+
+    .search-icon {
+        right: 10%;
     }
 }

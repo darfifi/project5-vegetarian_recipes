@@ -18,7 +18,7 @@ export default function About() {
                     <p className="info-container-description">This app makes you able to search vegetarian recipes 
                         writing a simple or complex search string in the search bar, e.g. "pasta" or "pasta with tomatoes"... 
                     </p>
-                    <p>
+                    <p className="info-container-description">
                         All results come from a third party source. The developer is not responsible for 
                         any incorrect or missing information.
                     </p>
@@ -27,7 +27,6 @@ export default function About() {
                     <br></br>
                     <p>Dario Fresi</p>
                     <p>Full Stack Developer</p>
-                    <br></br>
                     <p>dario.fresi@gmail.com</p>
                 </div>
             </Modal>}
