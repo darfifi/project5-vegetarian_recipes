@@ -1,0 +1,73 @@
+.navigation-button-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.navigation-button, .navigation-button-backward-off, .navigation-button-forward-off  {
+    width: 30px;
+    height: 40px; 
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(33, 122, 33);
+    border-radius: 20px;
+}
+
+.navigation-button:hover {
+    background-color: rgb(33, 122, 33, 0.6);
+}
+
+.navigation-button:active {
+    box-shadow: inset 0px 0px 10px 5px rgb(4, 50, 4);
+}
+
+.navigation-button-backward-off, .navigation-button-forward-off {
+    background-color: rgb(33, 122, 33, 0.3);
+}
+
+.pages-counter {
+    color: white;
+    letter-spacing: 1px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+
+@media screen and (min-width: 700px) and (max-width: 1021px) {
+    
+
+    .pages-counter {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px) {
+    
+
+    .pages-counter {
+        font-size: 13px;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    .pages-counter {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+    .pages-counter {
+        font-size: 13px;
+    }
+}

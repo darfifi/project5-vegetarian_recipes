@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    /*background-image: url("/public/images/main-background.jpg");*/
+    background-image: url("../src/assets/images/main-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+@media screen and (min-width: 1423px) and (max-width: 3000px) {
+    body {
+        background-position-x: center;  
+    }
+}
+
+@media screen and (min-width: 1222px) and (max-width: 1422px) {
+    body {
+        background-position: right;
+    }
+}
+
+@media screen and (min-width: 1022px) and (max-width: 1221px) and (min-resolution: 2dppx){
+    body {
+        background-position-x: -60px;
+    }
+}
+
+@media screen and (min-width: 822px) and (max-width: 1021px) and (min-resolution: 2dppx) {
+    body {
+        background-position-x: -90px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 821px) {
+    body {
+        background-position-x: -120px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px) {
+    body {
+        background-position-x: -170px;
+    }
+}
+
+/* MEDIA QUERIES FOR MOBILE DEVICES */
+
+@media screen and (min-width: 800px) and (max-width: 1422px) and (hover: none) {
+    body {
+        background-position-x: -250px; 
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    body {
+        background-position-x: -200px; 
+    }
+}
+
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+    body {
+        background-position-x: -180px;
+    }
+}
