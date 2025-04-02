@@ -1,5 +1,6 @@
 .info-link {
-    color: rgb(108, 164, 92);
+    color: rgb(89, 135, 82);
+    font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     letter-spacing: 2px;
@@ -50,7 +51,25 @@
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
+
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+    
+}
+
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+    /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */
+    .info-link {
+        font-size: 16px; 
+    }  
+}
+
 @media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+    /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
+
+    .info-link {
+        font-size: 14px; 
+    }
+
     .info-container {
         width: 300px;
         top: 60px;

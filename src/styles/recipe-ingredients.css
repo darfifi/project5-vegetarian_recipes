@@ -16,7 +16,7 @@
     width: 90%;
     padding-bottom: 15px;
 
-    border-bottom: 3px solid green;
+    border-bottom: 5px solid rgb(89, 135, 82);
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
@@ -115,7 +115,7 @@
 }
 
 @media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
-    /* iPhone16 Plus */
+    /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */
 
     .ingredients-list {
         margin-top: 5px;
@@ -137,7 +137,7 @@
 }
 
 @media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
-    /* iPhone16 */
+    /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
 
     .ingredients-list {
         margin-top: 5px;

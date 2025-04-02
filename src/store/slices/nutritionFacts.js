@@ -7,7 +7,6 @@ export const nutritionFactsSlice = createSlice({
     },
 
     reducers: {
-
         setNutritionFacts: (state, action) => {
             state.value = action.payload
         }

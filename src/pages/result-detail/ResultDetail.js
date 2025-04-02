@@ -8,6 +8,8 @@ import Layout from "../../common-components/Layout"
 import { useNavigation } from "../../customized-hooks/useNavigation"
 import { useSelector } from "react-redux"
 
+// The component returns the page with the list of recipes (3 recipes/each page)
+
 export default function ResultDetail() {
 
     const { backToResultsList } = useNavigation(); 

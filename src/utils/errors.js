@@ -1,4 +1,6 @@
 
+// Definition of the classes relative to customized errors
+
 class MissingSearchString extends Error {
     constructor(message) {
         super(message)
@@ -12,7 +14,5 @@ class MissingResult extends Error {
         this.name = 'No results found'
     }
 }
-
-
 
 export {MissingSearchString, MissingResult} 

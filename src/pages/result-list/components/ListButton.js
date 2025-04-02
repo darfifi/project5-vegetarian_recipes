@@ -3,6 +3,8 @@ import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io"; // Use of ex
 import '../../../styles/list-button.css'
 import { useSelector } from "react-redux";
 
+// The component returns the navigation buttons that permit to change the page of the receipes list
+
 export default function ListButton({forward, backward, totalPages, buttonState}) {
 
     const pageNumber = useSelector(state => state.pageNumber.value)

@@ -7,7 +7,6 @@ export const recipeSlice = createSlice({
     },
 
     reducers: {
-
         resetRecipe: state => {
             state.value = {}
         },

@@ -3,10 +3,12 @@ import '../../../styles/info-detail.css'
 import { useState } from "react";
 import Modal from "../../../common-components/Modal";
 
+// Component to be visualized when "About vegetarian Recipes" link is clicked on
+// The component gives minimal information on the app and the developer
 
 export default function About() {
 
-    const [info, setInfo] = useState(false)
+    const [info, setInfo] = useState(false) // Local state that activates the modal window visualization
 
     return (
         <div className="about-general-container">

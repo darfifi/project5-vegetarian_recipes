@@ -1,6 +1,8 @@
 import axios from "axios";
 import { API_KEY } from "../config";
 
+// Customized hook that manages the API calls 
+
 export function useAxios() {
 
     const getRecipesList = async (searchString) => {

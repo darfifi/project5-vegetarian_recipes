@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/modal.css"
 import { useSelector } from "react-redux"
 
+// The component manages the loading message during the searching status or an error message whenever an error occurs
+
 export default function Loading({message, subMessage}) {
 
     let modalStatus = useSelector(state => state.modalStatus.value)

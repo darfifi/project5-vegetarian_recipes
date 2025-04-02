@@ -22,9 +22,10 @@ export default function SearchBar({children}) {
         setSearchString(event.target.value)
     }
 
-    // Function called for the onClick event that starts the search of recipes
+    // Function called for the onClick event or 'enter' button pressing that starts the search of recipes 
 
     function startSearch() {
+        // Error management
         try {
             if (!searchString.trim()) {
                 throw new MissingSearchString('Search string cannot be empty!')     
@@ -33,15 +34,15 @@ export default function SearchBar({children}) {
                 throw new MissingSearchString('Search string should have at least two characters!')
             }
             const stringForUrl = encodeURIComponent(searchString)
-            dispatch(setLoading())
+            dispatch(setLoading()) // Change of the modalStatus slice in order to make the loading message to be visualized
             getRecipesList(stringForUrl)
                 .then(data => {
                     if (data.length === 0) {
                         throw new MissingResult('You shoud try with another search string!')
                     } 
-                    dispatch(setList(data))
-                    dispatch(resetModalStatus())
-                    navigate('/searchresult/recipes')       
+                    dispatch(setList(data)) // Loading of data from the API call  in the array defined by the recipesList slice
+                    dispatch(resetModalStatus()) // Reset of the modalStatus to the default value (no modal window visible)
+                    navigate('/searchresult/recipes') // Opening of the page with the recipes list visualization      
                 })
                 .catch(error => dispatch(setError(error)))
         } catch (error) {

@@ -1,4 +1,29 @@
 .button-to-home {
+    font-size: 14px;
+    font-weight: 800;
+    color: white;
+    padding: 8px 50px;
+    border: 2px solid white;
+    background-color: rgb(89, 135, 82); /* Verde naturale */
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.button-to-home:hover {
+    color: rgb(89, 135, 82);
+    background-color: white;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.button-to-home:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+/*
+.button-to-home {
     font-size: 12px;
     font-weight: 800;
     color: white;
@@ -13,6 +38,7 @@
     background-color: white;
     cursor: pointer;
 }
+*/
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 

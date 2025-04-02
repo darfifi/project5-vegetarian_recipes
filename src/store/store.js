@@ -7,9 +7,9 @@ import modalStatusReducer from './slices/modalStatus'
 import pageNumberReducer from "./slices/pageNumber";
 import nutritionFactsReducer from "./slices/nutritionFacts";
 
+// Store definition for global variables management
 
 export const store = configureStore({
-
     reducer: {
         recipesList: recipeListReducer,
         searchString: searchStringReducer,

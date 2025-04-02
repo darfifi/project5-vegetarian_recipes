@@ -2,6 +2,8 @@ import React from "react";
 import '../../../styles/recipe-ingredients.css'
 import { useSelector } from "react-redux";
 
+// The component returns the ingredients of a specific recipe  
+
 export default function RecipeIngredients() {
 
     const ingredients = useSelector(state => state.ingredients.value)

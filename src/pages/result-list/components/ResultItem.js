@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom"
 import { incrementPageNumber, decrementPageNumber } from "../../../store/slices/pageNumber"
 import { useState } from "react";
 
+// The component returns the list of recipes downloadedd from the API
+
 export default function ResultItem() { 
     const recipesList = useSelector(state => state.recipesList.value)
     const totalPages = Math.ceil(recipesList.length / 3)
