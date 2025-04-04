@@ -22,7 +22,6 @@
     background-color: rgb(192, 189, 189, 0.5);
     text-align: center;
     position: relative;
-
     top: 50px;
 }
 
@@ -39,7 +38,6 @@
     top: -10px;
     left: 300px;
     cursor: pointer;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,19 +49,18 @@
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
-
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) and (pointer: coarse) {
     
 }
 
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) and (pointer: coarse) {
     /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */
     .info-link {
         font-size: 16px; 
     }  
 }
 
-@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) and (pointer: coarse) {
     /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
 
     .info-link {
@@ -80,7 +77,6 @@
         left: 200px;
     }
 
-    
     .info-container-description {
         font-size: 13px;
     }

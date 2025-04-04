@@ -7,8 +7,7 @@
     text-shadow: 2px 2px 8px rgba(241, 170, 60, 0.7);
     width: 100%;
     padding: 10px 30px 40px 30px;
-    margin-top: 0;
-    
+    margin-top: 0; 
 }
 
 .title-home:hover {
@@ -19,6 +18,7 @@
 /* MEDIA QUERIES FOR DESKTOP AND LAPTOP DEVICES */
 
 @media screen and (min-width: 1423px) and (max-width: 3000px) {
+
     .title-home {
         font-size: 75px;
     }
@@ -30,6 +30,7 @@
 
 
 @media screen and (min-width: 1222px) and (max-width: 1422px) {
+
     .title-home {
         font-size: 75px;
     }
@@ -40,6 +41,7 @@
 }
 
 @media screen and (min-width: 1022px) and (max-width: 1221px) {
+
     .title-home {
         font-size: 65px;
     }
@@ -50,6 +52,7 @@
 }
 
 @media screen and (min-width: 822px) and (max-width: 1021px) {
+
     .title-home {
         font-size: 53px;
     }
@@ -60,6 +63,7 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 821px) {
+
     .title-home {
         font-size: 40px;
     }
@@ -70,6 +74,7 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 699px) {
+
     .title-home {
         font-size: 35px;
     }
@@ -81,21 +86,26 @@
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) and (pointer: coarse) {
+
     .title-details {
         padding: 10px 30px 20px 20px;
         font-size: 25px;
     }    
 }
 
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */ 
+    
     .title-details {
         padding: 10px 30px 20px 20px;
         font-size: 20px;
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
+
     .title-details {
         padding: 10px 10px 20px 10px;
         font-size: 18px;

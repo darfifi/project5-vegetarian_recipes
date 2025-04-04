@@ -41,8 +41,8 @@
 
 /* MEDIA QUERIES FOR DESKTOP AND LAPTOP DEVICES */
 
-
 @media screen and (min-width: 1423px) and (max-width: 3000px) {
+
     .recipe-image {
         width: 80px;
         height: 80px;
@@ -55,6 +55,7 @@
 
 
 @media screen and (min-width: 1222px) and (max-width: 1422px) {
+
     .recipe-image {
         width: 80px;
         height: 80px;
@@ -66,6 +67,7 @@
 }
 
 @media screen and (min-width: 1022px) and (max-width: 1221px) {
+
     .recipe-image {
         width: 80px;
         height: 80px;
@@ -77,6 +79,7 @@
 }
 
 @media screen and (min-width: 822px) and (max-width: 1021px) {
+
     .recipe-image {
         width: 70px;
         height: 70px;
@@ -88,6 +91,7 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 821px) {
+
     .recipe-image {
         width: 60px;
         height: 60px;
@@ -99,6 +103,7 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 699px) {
+    
     .recipe-image {
         width: 50px;
         height: 50px;
@@ -111,11 +116,13 @@
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) and (pointer: coarse) {
     
 }
 
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */
+
     .recipes-container {
         margin: 5px auto;
     }
@@ -134,7 +141,9 @@
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
+
     .recipes-container {
         margin: 5px auto;
     }

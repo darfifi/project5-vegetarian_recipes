@@ -38,10 +38,8 @@
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
-
 @media screen and (min-width: 700px) and (max-width: 1021px) {
     
-
     .pages-counter {
         font-size: 14px;
     }
@@ -49,7 +47,6 @@
 
 @media screen and (min-width: 500px) and (max-width: 699px) {
     
-
     .pages-counter {
         font-size: 13px;
     }
@@ -57,17 +54,21 @@
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) and (pointer: coarse) {
     
 }
 
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */ 
+
     .pages-counter {
         font-size: 13px;
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
+
     .pages-counter {
         font-size: 13px;
     }

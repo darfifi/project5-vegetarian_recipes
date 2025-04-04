@@ -22,37 +22,24 @@
     transform: scale(0.95);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
-/*
-.button-to-home {
-    font-size: 12px;
-    font-weight: 800;
-    color: white;
-    padding: 5px 50px;
-    border: 1px solid white;
-    background-color: rgb(242, 176, 54);
-    border-radius: 8px;
-}
-
-.button-to-home:hover {
-    color: rgb(242, 176, 54);
-    background-color: white;
-    cursor: pointer;
-}
-*/
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) and (pointer: coarse) {
     
 }
 
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */ 
+
     .button-to-home {
         padding: 5px 40px;
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) and (pointer: coarse) {
+    /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
+
     .button-to-home {
         padding: 5px 40px;
     }

@@ -15,13 +15,13 @@
     overflow: hidden;
     width: 90%;
     padding-bottom: 15px;
-
     border-bottom: 5px solid rgb(89, 135, 82);
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
 
 @media screen and (min-width: 1423px) and (max-width: 3000px) {
+
     .ingredients-list {
         font-size: 18px;
         padding-left: 90px;
@@ -35,6 +35,7 @@
 
 
 @media screen and (min-width: 1222px) and (max-width: 1422px) {
+
     .ingredients-list {
         font-size: 16px;
         padding-left: 90px;
@@ -47,6 +48,7 @@
 }
 
 @media screen and (min-width: 1022px) and (max-width: 1221px) {
+
     .ingredients-list {
         font-size: 14px;
         padding-left: 75px;
@@ -59,17 +61,20 @@
 }
 
 @media screen and (min-width: 822px) and (max-width: 1021px) {
+
     .ingredients-list { 
         font-size: 12px;
         padding-left: 60px;
         padding-right: 60px;
     }
+
     .ingredients-list-container {
         border-bottom: none;
     }
 }
 
 @media screen and (min-width: 600px) and (max-width: 821px) {
+
     .ingredients-list {
         font-size: 12px;
         padding-left: 40px;
@@ -85,6 +90,7 @@
 }
 
 @media screen and (min-width: 500px) and (max-width: 599px) {
+
     .ingredients-list {
         font-size: 12px;
         padding-left: 20px;
@@ -102,7 +108,8 @@
 
 /* MEDIA QUERIES FOR MOBILE DEVICES */
 
-@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) {
+@media screen and (min-width: 1000px) and (max-width: 1422px) and (hover: none) and (pointer: coarse) {
+
     .ingredients-list {
         margin-top: 5px;
         line-height: 25px;
@@ -114,7 +121,7 @@
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) {
+@media screen and (min-width: 400px) and (max-width: 999px) and (hover: none) and (pointer: coarse) {
     /* iPhone16 Plus, iPhone16 Pro, iPhone16 Pro Max, iPhone 11 */
 
     .ingredients-list {
@@ -136,7 +143,7 @@
     }
 }
 
-@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) {
+@media screen and (min-width: 100px) and (max-width: 399px) and (hover: none) and (pointer: coarse) {
     /* iPhone16, iPhone SE (3rd generation), iPhone 12 mini */
 
     .ingredients-list {
@@ -147,7 +154,6 @@
         overflow-y: hidden;
         overflow-y: scroll;
         font-size: 12px;
-
         padding-left: 20px;
         padding-right: 10px;
     }
