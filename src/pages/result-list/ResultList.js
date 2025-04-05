@@ -4,7 +4,6 @@ import ResultItem from '../result-list/components/ResultItem'
 import MultipurposeButton from "../../common-components/MultipurposeButton";
 import { useNavigation } from "../../customized-hooks/useNavigation";
 import Layout from "../../common-components/Layout";
-
 import Modal from "../../common-components/Modal"
 import Message from "../../common-components/Message"
 import { useSelector, useDispatch } from "react-redux"
