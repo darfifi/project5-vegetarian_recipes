@@ -4,7 +4,7 @@ import { useState } from "react";
 import Modal from "../../../common-components/Modal";
 
 // Component to be visualized when "About vegetarian Recipes" link is clicked on
-// The component gives minimal information on the app and the developer
+// The component gives minimal information on the app and on the developer
 
 export default function About() {
 
